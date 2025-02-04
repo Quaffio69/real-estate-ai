@@ -9,7 +9,7 @@ interface LayoutProps {
 
 export default function Layout({ children, title = 'Real Estate AI' }: LayoutProps) {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#f0fdf4]">
       <Head>
         <title>{title}</title>
         <meta name="description" content="AI-powered real estate platform" />

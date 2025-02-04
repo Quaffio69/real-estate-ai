@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#2196F3',
+        primary: '#22c55e',
         secondary: '#4CAF50',
         accent: '#81D4FA',
         success: '#66BB6A',
@@ -16,6 +16,7 @@ module.exports = {
         text: '#2C3E50',
         'text-light': '#70809A',
         border: '#E3F2FD',
+        'primary-hover': '#16a34a',
       },
       boxShadow: {
         'sm': '0 2px 4px rgba(33, 150, 243, 0.1)',
