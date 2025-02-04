@@ -3,40 +3,81 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-300">
       {/* Navbar */}
-      <nav className="bg-white shadow-md p-4 flex justify-between">
-        <h1 className="text-2xl font-bold">AI Real Estate Suite</h1>
-        <div>
-          <Link href="/tools" className="mr-4 text-blue-500">Tools</Link>
-          <Link href="/pricing" className="mr-4 text-blue-500">Pricing</Link>
-          <Link href="/contact" className="text-blue-500">Contact</Link>
+      <nav className="bg-white shadow-lg">
+        <div className="container mx-auto flex items-center justify-between p-4">
+          <Link href="/">
+            <a className="text-3xl font-extrabold text-blue-600">AI Real Estate Suite</a>
+          </Link>
+          <div className="space-x-6">
+            <Link href="/tools">
+              <a className="hover:text-blue-600 transition-colors">Tools</a>
+            </Link>
+            <Link href="/pricing">
+              <a className="hover:text-blue-600 transition-colors">Pricing</a>
+            </Link>
+            <Link href="/contact">
+              <a className="hover:text-blue-600 transition-colors">Contact</a>
+            </Link>
+          </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <div className="flex flex-col items-center justify-center text-center py-20">
-        <h2 className="text-4xl font-bold mb-4">AI-Powered Tools for Real Estate Professionals</h2>
-        <p className="text-lg mb-6">Optimize valuations, qualify leads, and analyze markets with AI.</p>
-        <Link href="/tools" className="bg-blue-500 text-white px-6 py-3 rounded-lg">Explore Tools</Link>
-      </div>
+      <section className="flex flex-col items-center justify-center text-center py-20 px-4 bg-blue-50">
+        <h2 className="text-5xl font-bold mb-4 text-gray-800">
+          AI-Powered Tools for Real Estate Professionals
+        </h2>
+        <p className="text-xl text-gray-600 mb-8">
+          Optimize valuations, qualify leads, and analyze markets with our cutting-edge AI suite.
+        </p>
+        <Link href="/tools">
+          <a className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full shadow-lg transition-all">
+            Explore Tools
+          </a>
+        </Link>
+      </section>
 
       {/* Features Section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-10">
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h3 className="text-xl font-bold">AI Property Valuation</h3>
-          <p>Get instant property price estimates using AI and market data.</p>
-          <Link href="/property-valuation" className="text-blue-500">Try Now</Link>
+      <section className="py-16 px-4">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
+            <h3 className="text-2xl font-semibold mb-3">AI Property Valuation</h3>
+            <p className="text-gray-600 mb-4">
+              Get instant property price estimates powered by AI and real-time market data.
+            </p>
+            <Link href="/property-valuation">
+              <a className="text-blue-500 hover:underline">Try Now</a>
+            </Link>
+          </div>
+          <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
+            <h3 className="text-2xl font-semibold mb-3">Lead Qualification</h3>
+            <p className="text-gray-600 mb-4">
+              Identify high-value leads with sophisticated AI analytics and scoring.
+            </p>
+            <Link href="/lead-qualification">
+              <a className="text-blue-500 hover:underline">Get Started</a>
+            </Link>
+          </div>
+          <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
+            <h3 className="text-2xl font-semibold mb-3">Market Insights</h3>
+            <p className="text-gray-600 mb-4">
+              Stay ahead with actionable insights and predictive market trends.
+            </p>
+            <Link href="/market-insights">
+              <a className="text-blue-500 hover:underline">Discover More</a>
+            </Link>
+          </div>
         </div>
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h3 className="text-xl font-bold">Lead Qualification</h3>
-          <p>Identify high-value leads using AI-powered analytics.</p>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-white shadow-inner py-6">
+        <div className="container mx-auto text-center text-gray-600">
+          <p>&copy; {new Date().getFullYear()} AI Real Estate Suite. All rights reserved.</p>
         </div>
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h3 className="text-xl font-bold">Market Insights</h3>
-          <p>Stay ahead with real-time and predictive real estate trends.</p>
-        </div>
-      </div>
+      </footer>
     </div>
   );
 }
